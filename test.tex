@@ -1,0 +1,34 @@
+% \documentclass[preview]{standalone}
+
+% \begin{document}
+
+% \begin{tikzpicture}[transform shape,scale=1,
+%         every node/.style={inner sep=0pt}]
+%     \node[minimum size=5cm](vecbox){};
+%     % \node[anchor=north west] at (vecbox.north west)     {\includegraphics{qrBox.png}};
+%     \node[inner sep=0pt] (russell) at (0,0)
+%     {\includegraphics[width=.25\textwidth]{qrBox.png}};
+%     % \node[anchor=north east] at (vecbox.north east){\pgfornament[width=2cm,symmetry=v]{63}};
+%     % \node[anchor=south west] at (vecbox.south west){\pgfornament[width=2cm,symmetry=h]{63}};
+%     % \node[anchor=south east] at (vecbox.south east){\pgfornament[width=2cm,symmetry=c]{63}};
+%     % \node[inner sep=6pt] (text) at (vecbox.center){\Huge Fa};
+% \end{tikzpicture}
+
+% \end{document}
+\documentclass{article}
+
+\usepackage{graphicx}
+\usepackage{tikz}
+
+\begin{document}
+\begin{tikzpicture}
+    \node[inner sep=0pt] (russell) at (0,0)
+    {\includegraphics[width=2cm]{qrBox.png}};
+    \node[inner sep=0pt] (whitehead) at (0,5)
+    {\includegraphics[width=2cm]{qrBox.png}};
+    \node[inner sep=0pt] (whitehead) at (5,5)
+    {\includegraphics[width=2cm]{qrBox.png}};
+    \draw[<->,thick, white] (russell.south east) -- (whitehead.north west)
+    node[midway,black] {{\fontsize{120}{10} \selectfont Fa}};
+\end{tikzpicture}
+\end{document}
